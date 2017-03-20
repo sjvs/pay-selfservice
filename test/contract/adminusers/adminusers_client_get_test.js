@@ -7,6 +7,7 @@ var chaiAsPromised = require('chai-as-promised');
 var userFixtures = require(__dirname + '/../../fixtures/user_fixtures');
 var getAdminUsersClient = require('../../../app/services/clients/adminusers_client');
 var PactInteractionBuilder = require(__dirname + '/../../fixtures/pact_interaction_builder').PactInteractionBuilder;
+var should = require('chai').should();
 
 chai.use(chaiAsPromised);
 
@@ -30,6 +31,7 @@ describe('adminusers client - get user', function () {
       done();
     });
   });
+
 
   /**
    * Remove the server and publish pacts to broker

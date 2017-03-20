@@ -13,15 +13,21 @@ module.exports = {
     });
   },
 
-  publish: function () {
+  publish: function (cb) {
     return wrapper.publishPacts({
       pactUrls: [path.resolve(process.cwd(), 'pacts')],
       pactBroker: pactBrokerUrl,
-      consumerVersion: "1"
+      consumerVersion: "1",
+      tags: []
     })
+      .then(cb);
   },
 
   removeAll: function () {
     return wrapper.removeAllServers();
+  },
+
+  list: function() {
+    return wrapper.listServers();
   }
 };
