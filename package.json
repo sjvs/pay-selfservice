@@ -57,7 +57,7 @@
   "dependencies": {
     "accessible-autocomplete": "^1.6.1",
     "appmetrics": "3.x",
-    "appmetrics-statsd": "2.0.x",
+    "appmetrics-statsd": "3.0.x",
     "aws-xray-sdk": "^1.2.0",
     "body-parser": "1.18.3",
     "change-case": "3.0.2",
